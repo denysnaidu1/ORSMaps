@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#E7E7E7"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.esri.arcgisruntime.mapping.view.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <androidx.appcompat.widget.SearchView
+            app:iconifiedByDefault="false"
+            app:queryHint="Find here"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/searchmain_custom"
+            android:id="@+id/svLocation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+    <ListView
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@id/svLocation"
+        android:id="@+id/lv_searchResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
+
+    <ProgressBar
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:id="@+id/progressBarMain"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:indeterminate="true"
+        android:minHeight="100dp"
+        android:minWidth="200dp"/>
+
+    <include layout="@layout/bottom_sheet_content"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
