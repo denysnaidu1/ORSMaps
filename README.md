@@ -1,2 +1,2 @@
 # ORSMaps
-Android maps build with ORS api
+Android maps app build with ORS api
